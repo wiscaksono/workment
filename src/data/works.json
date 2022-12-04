@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Web Application",
+    "tag": "Branding, UIUX Design",
+    "desc": "Lorem Ipsum is simply text of the printingand typesetting industry.",
+    "image": "project-1"
+  },
+  {
+    "id": 2,
+    "title": "Creative Agency",
+    "tag": "Branding, UIUX Design",
+    "desc": "Lorem Ipsum is simply text of the printingand typesetting industry.",
+    "image": "project-2"
+  },
+  {
+    "id": 3,
+    "title": "Digital Agency",
+    "tag": "Branding, UIUX Design",
+    "desc": "Lorem Ipsum is simply text of the printingand typesetting industry.",
+    "image": "project-3"
+  },
+  {
+    "id": 4,
+    "title": "Texas Protfolio",
+    "tag": "Branding, UIUX Design",
+    "desc": "Lorem Ipsum is simply text of the printingand typesetting industry.",
+    "image": "project-4"
+  }
+]

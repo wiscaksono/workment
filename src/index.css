@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Syncopate:wght@400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  main {
+    @apply py-10;
+  }
+
+  h1 {
+    @apply font-syncopate font-bold text-primary-dark text-[40px] uppercase;
+  }
+
+  h2 {
+    @apply font-syncopate font-bold text-primary-dark text-[35px];
+  }
+
+  h3 {
+    @apply font-syncopate font-bold text-primary-dark text-[30px] leading-[106.1%] uppercase;
+  }
+
+  h4 {
+    @apply font-syncopate font-bold text-primary-dark text-[25px];
+  }
+
+  h5 {
+    @apply font-syncopate font-bold text-primary-dark text-[22px];
+  }
+
+  h6 {
+    @apply font-syncopate font-bold text-primary-dark text-[20px];
+  }
+
+  header {
+    @apply max-w-[1400px] mx-auto border-x-4 border-b-4 border-primary-dark flex items-center justify-center;
+  }
+
+  section {
+    @apply max-w-[1400px] mx-auto border-x-4 border-b-4 border-primary-dark;
+  }
+
+  p {
+    @apply font-roboto-mono text-xl text-natural-dark leading-[145.4%];
+  }
+}
+
+@layer components {
+  .side {
+    @apply flex flex-col items-center justify-center w-[92px] shrink-0;
+  }
+
+  .display {
+    @apply font-syncopate font-bold text-primary-dark text-[45px] leading-[119.1%];
+  }
+
+  .content {
+    @apply flex-1 border-x-4 border-primary-dark;
+  }
+
+  .vertical-text {
+    @apply rotate-180 uppercase;
+    writing-mode: vertical-rl;
+  }
+
+  #we-are-special:hover .text-outline {
+    @apply text-primary-yellow;
+    text-shadow: -1px -1px 0 #2e2e2e, 1px -1px 0 #2e2e2e, -1px 1px 0 #2e2e2e,
+      1px 1px 0 #2e2e2e;
+  }
+
+  .text-outline {
+    @apply text-primary-dark;
+    font-size: 60px;
+    line-height: 119.1%;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+      1px 1px 0 white;
+  }
+}
