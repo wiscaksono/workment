@@ -37,7 +37,7 @@ export default function Home() {
               Lorem Ipsum is simply dummy text of the printingand typesetting
               industry.
             </p>
-            <Button />
+            <Button>Get Started</Button>
           </div>
           <div className="flex-1">
             <img src="work-banner.png" alt="" />
