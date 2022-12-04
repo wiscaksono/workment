@@ -4,8 +4,8 @@ import React from "react";
 export default function Button({ children }) {
   return (
     <div className="relative">
-      <div className="px-[35px] py-[26px] absolute inset-0 bg-white w-max font-syncopate text-white text-lg font-bold flex items-center gap-2 inner-border-4 inner-border-primary-dark leading-[106.1%]">
-        GET STARTED
+      <div className="px-[35px] py-[26px] absolute inset-0 bg-white w-max font-syncopate text-white text-lg font-bold flex items-center gap-2 inner-border-4 inner-border-primary-dark leading-[106.1%] uppercase">
+        {children}
         <svg
           fill="none"
           viewBox="0 0 24 24"
@@ -21,7 +21,7 @@ export default function Button({ children }) {
         </svg>
       </div>
 
-      <button className="px-[35px] py-[26px] bg-primary-dark w-max font-syncopate text-white text-lg font-bold flex items-center gap-2 -translate-y-3 translate-x-3 leading-[106.1%] group active:translate-x-0 active:translate-y-0 transition-transform">
+      <button className="px-[35px] py-[26px] bg-primary-dark w-max font-syncopate text-white text-lg font-bold flex items-center gap-2 -translate-y-3 translate-x-3 leading-[106.1%] group active:translate-x-0 active:translate-y-0 transition-transform uppercase">
         {children}
         <svg
           fill="none"

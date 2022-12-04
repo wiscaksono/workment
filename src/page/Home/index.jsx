@@ -160,7 +160,7 @@ export default function Home() {
               />
             ))}
             <div className="flex items-center justify-center mt-[88px]">
-              <Button />
+              <Button>more project</Button>
             </div>
           </div>
           <div className="side" />
