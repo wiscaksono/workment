@@ -1,11 +1,11 @@
-import React, { useEffect, useRef } from "react";
-import Button from "../../components/Button";
-import Navbar from "../../components/Navbar";
-import Marquee from "react-fast-marquee";
-import works from "../../data/works.json";
-import { CircleIcon } from "../../components/CircleIcon";
-import gsap, { Linear } from "gsap";
-import { TweenMax } from "gsap/gsap-core";
+import gsap, { Linear } from 'gsap'
+import React, { useEffect, useRef } from 'react'
+import Marquee from 'react-fast-marquee'
+import { Link } from 'react-router-dom'
+import Button from '../../components/Button'
+import { CircleIcon } from '../../components/CircleIcon'
+import Navbar from '../../components/Navbar'
+import works from '../../data/works.json'
 
 export default function Home() {
   return (
@@ -596,22 +596,21 @@ const WorkPost = ({ title, desc, href, image, tag }) => {
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
 const IconShapes = () => {
-
-  let polygon = useRef();
-  let star = useRef();
+  let polygon = useRef()
+  let star = useRef()
 
   useEffect(() => {
     gsap
       .timeline({ repeat: -1, defaults: { duration: 20 } })
       .to([star.current, polygon.current], {
         rotate: 360,
-        ease: Linear.easeNone
-      });
-  }, []);
+        ease: Linear.easeNone,
+      })
+  }, [])
 
   return (
     <>
@@ -628,5 +627,5 @@ const IconShapes = () => {
         ref={star}
       />
     </>
-  );
-};
+  )
+}

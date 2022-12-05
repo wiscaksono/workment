@@ -1,26 +1,26 @@
-import gsap, { Linear } from "gsap";
-import { TweenMax } from "gsap/gsap-core";
-import { useEffect, useRef } from "react";
+import gsap, { Linear } from 'gsap'
+import { TweenMax } from 'gsap/gsap-core'
+import { useEffect, useRef } from 'react'
 
 export const CircleIcon = () => {
-  let hand = useRef();
-  let rotateCircle = useRef();
+  let hand = useRef()
+  let rotateCircle = useRef()
 
   useEffect(() => {
     gsap
       .timeline({ repeat: -1, yoyo: true, defaults: { duration: 1 } })
       .to(hand.current, {
         rotate: -30,
-        ease: Linear.easeNone
-      });
+        ease: Linear.easeNone,
+      })
 
     gsap
       .timeline({ repeat: -1, defaults: { duration: 20 } })
       .to(rotateCircle.current, {
         rotate: 360,
-        ease: Linear.easeNone
-      });
-  }, []);
+        ease: Linear.easeNone,
+      })
+  }, [])
 
   return (
     <div className="relative">
@@ -39,7 +39,7 @@ export const CircleIcon = () => {
           r="53"
           fill="#C2F4FF"
           stroke="#2E2E2E"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <mask id="path-3-inside-1_202_912" fill="white">
           <path d="M212 106C212 164.542 164.542 212 106 212C47.4578 212 0 164.542 0 106C0 47.4578 47.4578 0 106 0C164.542 0 212 47.4578 212 106ZM35.2691 106C35.2691 145.064 66.9364 176.731 106 176.731C145.064 176.731 176.731 145.064 176.731 106C176.731 66.9364 145.064 35.2691 106 35.2691C66.9364 35.2691 35.2691 66.9364 35.2691 106Z" />
@@ -48,7 +48,7 @@ export const CircleIcon = () => {
           d="M212 106C212 164.542 164.542 212 106 212C47.4578 212 0 164.542 0 106C0 47.4578 47.4578 0 106 0C164.542 0 212 47.4578 212 106ZM35.2691 106C35.2691 145.064 66.9364 176.731 106 176.731C145.064 176.731 176.731 145.064 176.731 106C176.731 66.9364 145.064 35.2691 106 35.2691C66.9364 35.2691 35.2691 66.9364 35.2691 106Z"
           fill="white"
           stroke="#2E2E2E"
-          stroke-width="4"
+          strokeWidth="4"
           mask="url(#path-3-inside-1_202_912)"
         />
         <path
@@ -161,11 +161,11 @@ export const CircleIcon = () => {
         <path
           d="M61.9462 23.8538C61.8829 21.3628 63.8511 19.2921 66.342 19.2289C68.833 19.1656 70.9038 21.1336 70.9669 23.6247C70.977 24.024 70.9342 24.4229 70.8392 24.8109L68.2414 48.9493L68.0889 50.1553L69.3257 37.9162C69.2624 35.4252 71.2306 33.3544 73.7215 33.2913C76.2125 33.2281 78.2833 35.196 78.3464 37.6871C78.3565 38.0864 78.3137 38.4853 78.2187 38.8733L76.4414 55.3889L74.8225 68.1738C73.0046 78.6497 62.8917 84.2691 52.4185 82.4517C46.3811 81.3776 40.9469 78.1276 37.1443 73.3168C33.9187 68.9476 26.1262 57.133 26.1262 57.133C24.6027 54.1702 26.5555 50.1136 27.861 51.3291L39.6722 58.7486L40.5526 51.9053L39.6722 58.7486L40.5526 51.9053L43.8654 24.1824C43.8021 21.6914 45.7703 19.6207 48.2612 19.5575C50.7522 19.4943 52.8229 21.4622 52.8861 23.9533C52.8962 24.3527 52.8534 24.7515 52.7584 25.1395L51.8013 34.0327L50.4003 47.5534L53.3503 19.3459C53.287 16.8549 55.2551 14.7842 57.7461 14.721C60.2371 14.6577 62.3078 16.6258 62.371 19.1169C62.3811 19.5162 62.3382 19.915 62.2433 20.303L59.3183 46.2752"
           stroke="#2E2E2E"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     </div>
-  );
-};
+  )
+}
