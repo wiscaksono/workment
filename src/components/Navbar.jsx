@@ -1,31 +1,34 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Navbar() {
   const navigations = [
     {
-      name: "HOME",
-      href: "/",
+      name: 'HOME',
+      href: '/',
     },
     {
-      name: "WORK",
-      href: "/work",
+      name: 'WORK',
+      href: '/work',
     },
     {
-      name: "ABOUT",
-      href: "/about",
+      name: 'ABOUT',
+      href: '/about',
     },
     {
-      name: "BLOG",
-      href: "/blog",
+      name: 'BLOG',
+      href: '/blog',
     },
     {
-      name: "CONTACT",
-      href: "/contact",
+      name: 'CONTACT',
+      href: '/contact',
     },
-  ];
+  ]
   return (
-    <nav className="max-w-[1400px] mx-auto flex items-center justify-between border-4 border-primary-dark h-24 bg-white">
+    <nav
+      className="max-w-[1400px] mx-auto flex items-center justify-between border-4 border-primary-dark h-24 bg-white"
+      id="top"
+    >
       <Link
         to="/"
         className="w-24 h-24 flex items-center justify-center border-r-4 border-primary-dark shrink-0"
@@ -35,7 +38,7 @@ export default function Navbar() {
       <div className="grid grid-cols-12 flex-1 h-full items-center">
         <h3 className="col-span-4 pl-[22px]">Workment</h3>
         <div className="font-syncopate font-bold bg-natural-wasabi h-full border-l-4 border-primary-dark flex items-center justify-center w-full col-span-8 gap-8">
-          {navigations.map((navigation) => (
+          {navigations.map(navigation => (
             <Link key={navigation.name} to={navigation.href}>
               {navigation.name}
             </Link>
@@ -61,5 +64,5 @@ export default function Navbar() {
         </svg>
       </div>
     </nav>
-  );
+  )
 }

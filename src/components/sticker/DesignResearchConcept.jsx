@@ -1,8 +1,7 @@
 import gsap, { Linear } from 'gsap'
-import { TweenMax } from 'gsap/gsap-core'
 import { useEffect, useRef } from 'react'
 
-export const CircleIcon = () => {
+export default function DesignResearchConcept() {
   let hand = useRef()
   let rotateCircle = useRef()
 

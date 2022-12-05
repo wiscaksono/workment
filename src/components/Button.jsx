@@ -1,8 +1,8 @@
 import React from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 // import ArrowUp
 
-export default function Button({ children, transparent, href }) {
+export default function Button({ children, transparent, href, ...props }) {
   const navigate = useNavigate()
   function bgcolor() {
     if (transparent) {

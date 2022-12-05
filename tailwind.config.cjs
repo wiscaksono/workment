@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'footer-patern': 'url("")',
+        'footer-patern': 'url("backdrop.png")',
       },
       fontFamily: {
         syncopate: ['Syncopate', 'sans-serif'],
