@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Button from "../../components/Button";
 import Navbar from "../../components/Navbar";
 import Marquee from "react-fast-marquee";
 import works from "../../data/works.json";
+import { CircleIcon } from "../../components/CircleIcon";
+import gsap, { Linear } from "gsap";
+import { TweenMax } from "gsap/gsap-core";
 
 export default function Home() {
   return (
@@ -42,23 +45,12 @@ export default function Home() {
           <div className="flex-1">
             <img src="work-banner.png" alt="" />
           </div>
-          <img
-            src="shapes/polygon.svg"
-            alt="Polygon"
-            className="left-[47px] top-[25px] absolute"
-          />
-          <img
-            src="shapes/star.svg"
-            alt="Polygon"
-            className="absolute bottom-[73px] left-[367px]"
-          />
+          <IconShapes />
         </div>
         <div className="side"></div>
-        <img
-          src="/badge.svg"
-          alt="Badge"
-          className="absolute right-[22px] top-1/2 -translate-y-1/2 z-50"
-        />
+        <div className="absolute right-[22px] top-1/2 -translate-y-1/2 z-50">
+          <CircleIcon />
+        </div>
       </header>
 
       <section className="bg-white border-b-0">
@@ -396,5 +388,37 @@ const WorkPost = ({ title, desc, href, image, tag }) => {
         />
       </div>
     </div>
+  );
+};
+
+const IconShapes = () => {
+
+  let polygon = useRef();
+  let star = useRef();
+
+  useEffect(() => {
+    gsap
+      .timeline({ repeat: -1, defaults: { duration: 20 } })
+      .to([star.current, polygon.current], {
+        rotate: 360,
+        ease: Linear.easeNone
+      });
+  }, []);
+
+  return (
+    <>
+      <img
+        src="shapes/polygon.svg"
+        alt="Polygon"
+        className="left-[47px] top-[25px] absolute"
+        ref={polygon}
+      />
+      <img
+        src="shapes/star.svg"
+        alt="Polygon"
+        className="absolute bottom-[73px] left-[367px]"
+        ref={star}
+      />
+    </>
   );
 };
