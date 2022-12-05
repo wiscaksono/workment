@@ -3,6 +3,7 @@ import Button from '../../components/Button'
 import Navbar from '../../components/Navbar'
 import Marquee from 'react-fast-marquee'
 import works from '../../data/works.json'
+import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
@@ -328,6 +329,215 @@ export default function Home() {
           <div className="side" />
         </div>
       </section>
+
+      <section className="relative overflow-hidden bg-white">
+        <div className="flex w-full">
+          <div className="side">
+            <h6 className="vertical-text">AWARDS</h6>
+          </div>
+          <div className="flex content justify-center py-32 px-16">
+            <div className="w-1/2 flex flex-col gap-[70px] pr-[77px]">
+              <div>
+                <p className="font-bold text-[22px] text-natural-dark mb-4">
+                  2018
+                </p>
+                <h3 className="mb-[14px]">Designers meeting</h3>
+                <p>
+                  It is a long established fact that reader will be distracted
+                  readable content of when looking.
+                </p>
+              </div>
+              <div>
+                <p className="font-bold text-[22px] text-natural-dark mb-4">
+                  2020
+                </p>
+                <h3 className="mb-[14px]">Service design</h3>
+                <p>
+                  It is a long established fact that reader will be distracted
+                  readable content of when looking.
+                </p>
+              </div>
+              <div>
+                <p className="font-bold text-[22px] text-natural-dark mb-4">
+                  2021
+                </p>
+                <h3 className="mb-[14px]">Packaging</h3>
+                <p>
+                  It is a long established fact that reader will be distracted
+                  readable content of when looking.
+                </p>
+              </div>
+              <div>
+                <p className="font-bold text-[22px] text-natural-dark mb-4">
+                  2021
+                </p>
+                <h3 className="mb-[14px]">Packaging</h3>
+                <p>
+                  It is a long established fact that reader will be distracted
+                  readable content of when looking.
+                </p>
+              </div>
+            </div>
+            <div className="w-1/2 relative">
+              <span className="absolute inset-0 border-4 border-primary-dark z-10"></span>
+              <span className="absolute inset-0 border-4 border-primary-dark z-10 translate-x-3 -translate-y-3 bg-primary-dark"></span>
+              <video
+                controls
+                width={`100%`}
+                muted
+                className="translate-x-6 -translate-y-6 z-30 relative"
+              >
+                <source
+                  type="video/mp4"
+                  src="https://assets.mixkit.co/videos/preview/mixkit-tree-with-yellow-flowers-1173-large.mp4"
+                />
+              </video>
+            </div>
+          </div>
+          <div className="side" />
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden bg-natural-cream border-b-0">
+        <div className="flex w-full">
+          <div className="side">
+            <h6 className="vertical-text">NEWS</h6>
+          </div>
+          <div className="flex flex-col content justify-center py-[133px] px-[52px] relative items-center">
+            <img
+              src="shapes/blog.svg"
+              alt="Blog"
+              className="absolute top-20 right-[173px]"
+            />
+            <div className="text-center mb-11">
+              <h1 className="mb-1.5">Latest news</h1>
+              <p>
+                It is a long established fact that a reader <br /> will be
+                distracted by the readable.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 gap-12 items-center justify-center mb-14">
+              <Link className="relative group">
+                <span className="absolute inset-0 border-4 border-primary-dark bg-primary-dark z-10 group-hover:-translate-x-2 group-hover:translate-y-2 transition-transform" />
+                <div className="relative z-20">
+                  <div className="py-[35px] px-[38px] bg-[#8DBAB6]">
+                    <img
+                      src="blog/blog-1.png"
+                      alt=""
+                      className="border-4 border-primary-dark"
+                    />
+                  </div>
+                  <div className="bg-white">
+                    <div className="grid grid-cols-2 divide-x-4 divide-primary-dark">
+                      <div className="py-2 px-6 flex items-center gap-1">
+                        <img src="icons/chat.svg" alt="" />
+                        <p className="font-bold leading-[119.1%] text-lg text-natural-dark">
+                          John Smith
+                        </p>
+                      </div>
+                      <div className="py-2 px-6 flex items-center gap-1">
+                        <img src="icons/calendar.svg" alt="" />
+                        <p className="font-bold leading-[119.1%] text-lg text-natural-dark">
+                          June 15, 2022
+                        </p>
+                      </div>
+                    </div>
+                    <div className="px-9 py-8 flex flex-col gap-6 border-t-4 border-primary-dark">
+                      <h4 className="line-clamp-3">
+                        Range input with completely custom design styles
+                      </h4>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="39"
+                        height="39"
+                        fill="none"
+                        viewBox="0 0 14 14"
+                        className="self-end group-hover:rotate-45 transition-transform"
+                      >
+                        <path
+                          stroke="#2E2E2E"
+                          strokeWidth="2"
+                          d="M0 1h13m0 0v13m0-13L1 13"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+              <Link className="relative group">
+                <span className="absolute inset-0 border-4 border-primary-dark bg-primary-dark z-10 group-hover:-translate-x-2 group-hover:translate-y-2 transition-transform" />
+                <div className="relative z-20">
+                  <div className="py-[35px] px-[38px] bg-[#63A2DC]">
+                    <img
+                      src="blog/blog-2.png"
+                      alt=""
+                      className="border-4 border-primary-dark"
+                    />
+                  </div>
+                  <div className="bg-white">
+                    <div className="grid grid-cols-2 divide-x-4 divide-primary-dark ">
+                      <div className="py-2 px-6 flex items-center gap-1">
+                        <img src="icons/chat.svg" alt="" />
+                        <p className="font-bold leading-[119.1%] text-lg text-natural-dark">
+                          John Smith
+                        </p>
+                      </div>
+                      <div className="py-2 px-6 flex items-center gap-1">
+                        <img src="icons/calendar.svg" alt="" />
+                        <p className="font-bold leading-[119.1%] text-lg text-natural-dark">
+                          June 15, 2022
+                        </p>
+                      </div>
+                    </div>
+                    <div className="px-9 py-8 flex flex-col gap-6 border-t-4 border-primary-dark">
+                      <h4 className="line-clamp-4">
+                        Range input with completely custom design styles
+                      </h4>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="39"
+                        height="39"
+                        fill="none"
+                        viewBox="0 0 14 14"
+                        className="self-end group-hover:rotate-45 transition-transform"
+                      >
+                        <path
+                          stroke="#2E2E2E"
+                          strokeWidth="2"
+                          d="M0 1h13m0 0v13m0-13L1 13"
+                        ></path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </div>
+
+            <Button transparent={true} href="/blog">
+              More Blog
+            </Button>
+          </div>
+          <div className="side" />
+        </div>
+      </section>
+
+      <section className="bg-natural-dark max-w-full flex items-center justify-center">
+        <div className="max-w-7xl max-auto">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui
+          voluptate, aperiam laboriosam nostrum, minus dolorum sed voluptates
+          nihil debitis similique. Nesciunt architecto unde inventore adipisci
+          suscipit tempore expedita numquam praesentium nobis, sequi laborum,
+          recusandae quas repudiandae quaerat harum commodi natus ullam
+          perspiciatis, quis alias. Voluptatibus voluptates quisquam,
+          repellendus praesentium perspiciatis eveniet! Minima rem blanditiis
+          cumque, quidem rerum corrupti et repudiandae sequi vero id maiores
+          possimus in non nemo molestias quas. Iusto quas dolorem labore et ad
+          veniam, laudantium nostrum. Similique consequatur harum, totam
+          expedita praesentium labore ab, sed, quibusdam debitis placeat
+          deleniti accusantium minima maxime hic earum sit eos.
+        </div>
+      </section>
     </main>
   )
 }
@@ -343,7 +553,6 @@ const Card = ({ icon, title, desc, href }) => {
           <div className="w-[92px] h-[92px] bg-primary-dark rounded-full absolute top-0 z-0"></div>
         </div>
       </div>
-
       <h6 className="uppercase mb-[22px]">{title}</h6>
       <p className="mb-[51px]">{desc}</p>
       <ButtonWithArrow href={href}>Read More</ButtonWithArrow>
@@ -355,7 +564,7 @@ const ButtonWithArrow = ({ children, href }) => {
   return (
     <a
       href={href}
-      className="font-syncopate font-bold gap-2.5 flex items-center cursor-pointer uppercase "
+      className="font-syncopate font-bold gap-2.5 flex items-center cursor-pointer uppercase group"
     >
       {children}
       <svg

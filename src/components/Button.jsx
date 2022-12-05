@@ -1,10 +1,22 @@
-import React from "react";
+import React from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
 // import ArrowUp
 
-export default function Button({ children }) {
+export default function Button({ children, transparent, href }) {
+  const navigate = useNavigate()
+  function bgcolor() {
+    if (transparent) {
+      return 'bg-transparent'
+    } else {
+      return 'bg-white'
+    }
+  }
+
   return (
     <div className="relative">
-      <div className="px-[35px] py-[26px] absolute inset-0 bg-white w-max font-syncopate text-white text-lg font-bold flex items-center gap-2 inner-border-4 inner-border-primary-dark leading-[106.1%] uppercase">
+      <div
+        className={`${bgcolor()} px-[35px] py-[26px] absolute inset-0 w-max font-syncopate text-white text-lg font-bold flex items-center gap-2 inner-border-4 inner-border-primary-dark leading-[106.1%] uppercase`}
+      >
         {children}
         <svg
           fill="none"
@@ -21,7 +33,10 @@ export default function Button({ children }) {
         </svg>
       </div>
 
-      <button className="px-[35px] py-[26px] bg-primary-dark w-max font-syncopate text-white text-lg font-bold flex items-center gap-2 -translate-y-3 translate-x-3 leading-[106.1%] group active:translate-x-0 active:translate-y-0 transition-transform uppercase">
+      <button
+        className="px-[35px] py-[26px] bg-primary-dark w-max font-syncopate text-white text-lg font-bold flex items-center gap-2 -translate-y-3 translate-x-3 leading-[106.1%] group active:translate-x-0 active:translate-y-0 transition-transform uppercase"
+        onClick={() => navigate(`${href}`)}
+      >
         {children}
         <svg
           fill="none"
@@ -38,5 +53,5 @@ export default function Button({ children }) {
         </svg>
       </button>
     </div>
-  );
+  )
 }
