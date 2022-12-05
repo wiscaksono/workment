@@ -1,8 +1,8 @@
-import React from "react";
-import Button from "../../components/Button";
-import Navbar from "../../components/Navbar";
-import Marquee from "react-fast-marquee";
-import works from "../../data/works.json";
+import React from 'react'
+import Button from '../../components/Button'
+import Navbar from '../../components/Navbar'
+import Marquee from 'react-fast-marquee'
+import works from '../../data/works.json'
 
 export default function Home() {
   return (
@@ -149,7 +149,7 @@ export default function Home() {
             <h6 className="vertical-text">Some of our finest work</h6>
           </div>
           <div className="flex px-[58px] pt-[51px] pb-[142px] gap-[53px] content flex-col relative z-20">
-            {works.slice(0, 3).map((work) => (
+            {works.slice(0, 3).map(work => (
               <WorkPost
                 key={work.id}
                 title={work.title}
@@ -329,7 +329,7 @@ export default function Home() {
         </div>
       </section>
     </main>
-  );
+  )
 }
 
 const Card = ({ icon, title, desc, href }) => {
@@ -348,8 +348,8 @@ const Card = ({ icon, title, desc, href }) => {
       <p className="mb-[51px]">{desc}</p>
       <ButtonWithArrow href={href}>Read More</ButtonWithArrow>
     </div>
-  );
-};
+  )
+}
 
 const ButtonWithArrow = ({ children, href }) => {
   return (
@@ -373,8 +373,8 @@ const ButtonWithArrow = ({ children, href }) => {
         ></path>
       </svg>
     </a>
-  );
-};
+  )
+}
 
 const WorkPost = ({ title, desc, href, image, tag }) => {
   return (
@@ -396,5 +396,5 @@ const WorkPost = ({ title, desc, href, image, tag }) => {
         />
       </div>
     </div>
-  );
-};
+  )
+}
