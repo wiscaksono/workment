@@ -7,6 +7,11 @@ import Navbar from '../../components/Navbar'
 import DesignResearchConcept from '../../components/sticker/DesignResearchConcept'
 import works from '../../data/works.json'
 import KeepSmileEveryday from '../../components/sticker/KeepSmileEveryday'
+import CTA from '../../components/CTA'
+import Footer from '../../components/Footer'
+import ClientMarquee from '../../components/ClientMarquee'
+import TextMarquee from '../../components/TextMarquee'
+import Statistics from '../../components/Statistics'
 
 export default function Home() {
   return (
@@ -118,21 +123,7 @@ export default function Home() {
           </div>
         </section>
 
-        <Marquee
-          className="bg-white border-y-4 border-primary-dark  overflow-hidden"
-          gradient={false}
-        >
-          <div className="py-[26px] flex items-center gap-10 text-primary-dark mr-10">
-            <img src="shapes/start.svg" alt="" />
-            <p className="uppercase text-[60px] font-bold">We're a</p>
-            <img src="shapes/blink.svg" alt="" />
-            <p className="uppercase text-[60px] font-bold">full-service</p>
-            <img src="shapes/heart.svg" alt="" />
-            <p className="uppercase text-[60px] font-bold">CREATIVE digital</p>
-            <img src="shapes/agency.svg" alt="" />
-            <p className="uppercase text-[60px] font-bold">AGENCY</p>
-          </div>
-        </Marquee>
+        <TextMarquee />
 
         <section className="bg-white border-b-0 relative overflow-hidden">
           <div className="w-[739px] h-[428px] rounded-full bg-natural-wasabi/50 blur-3xl absolute -left-[369px] -top-[214px]" />
@@ -161,70 +152,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-primary-dark border-b-0 relative overflow-hidden">
-          <div className="flex w-full">
-            <div className="side" />
-            <div className="flex py-32 content flex-col relative z-20">
-              <div>
-                <h1 className="text-white text-center mb-2">
-                  What makes us special?
-                </h1>
-                <p className="mb-8 text-white text-center text-xl">
-                  Lorem Ipsum is simply dummy text of the <br /> printingand
-                  typesetting industry.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-4 border-4 border-white divide-x-4 divide-white">
-                <div>
-                  <div
-                    className="m-6 hover:bg-primary-yellow px-7 py-5 transition-colors group"
-                    id="we-are-special"
-                  >
-                    <p className="text-outline text-center">50+</p>
-                    <p className="text-center text-white group-hover:text-primary-dark text-base">
-                      Years operation
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  <div
-                    className="m-6 hover:bg-primary-yellow px-7 py-5 transition-colors group"
-                    id="we-are-special"
-                  >
-                    <p className="text-outline text-center">360</p>
-                    <p className="text-center text-white group-hover:text-primary-dark text-base">
-                      Project Delivery
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  <div
-                    className="m-6 hover:bg-primary-yellow px-7 py-5 transition-colors group"
-                    id="we-are-special"
-                  >
-                    <p className="text-outline text-center">600+</p>
-                    <p className="text-center text-white group-hover:text-primary-dark text-base">
-                      Specialist
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  <div
-                    className="m-6 hover:bg-primary-yellow px-7 py-5 transition-colors group"
-                    id="we-are-special"
-                  >
-                    <p className="text-outline text-center">75+</p>
-                    <p className="text-center text-white group-hover:text-primary-dark text-base">
-                      Awards Exellency
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="side" />
-          </div>
-        </section>
+        <Statistics />
 
         <section className="relative overflow-hidden border-b-0">
           <div className="flex w-full">
@@ -283,19 +211,7 @@ export default function Home() {
           </div>
         </section>
 
-        <Marquee
-          className="bg-natural-aqua border-y-4 border-primary-dark  overflow-hidden relative z-30"
-          gradient={false}
-        >
-          <div className="flex items-center gap-[170px] text-primary-dark py-16 mr-[170px]">
-            <img src="shapes/client-1.svg" alt="" />
-            <img src="shapes/client-2.svg" alt="" />
-            <img src="shapes/client-3.svg" alt="" />
-            <img src="shapes/client-4.svg" alt="" />
-            <img src="shapes/client-5.svg" alt="" />
-            <img src="shapes/client-6.svg" alt="" />
-          </div>
-        </Marquee>
+        <ClientMarquee />
       </div>
 
       <div className="relative bg-[#F4F4F4] overflow-x-hidden pb-10">
@@ -327,7 +243,6 @@ export default function Home() {
             <div className="side" />
           </div>
         </section>
-
         <section className="relative overflow-hidden bg-white z-20">
           <div className="flex w-full">
             <div className="side">
@@ -395,7 +310,6 @@ export default function Home() {
             <div className="side" />
           </div>
         </section>
-
         <section className="relative overflow-hidden bg-natural-cream border-b-0 z-20">
           <div className="flex w-full">
             <div className="side">
@@ -520,210 +434,8 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-natural-dark max-w-full flex items-center justify-center border-0 bg-footer-patern bg-cover z-20 relative">
-          <div className="max-w-[1400px] max-auto py-36 relative w-full">
-            <KeepSmileEveryday className="absolute left-0 top-1/2 -translate-y-1/2" />
-            <div className="flex items-center justify-center flex-col">
-              <p className="text-white mb-4">Need a successful people?</p>
-              <h1 className="text-white mb-[69px]">Lets Work Together</h1>
-              <div className="relative">
-                <div
-                  className={`px-[35px] py-[26px] absolute inset-0 w-max font-syncopate text-white text-lg font-bold flex items-center gap-2 inner-border-4 inner-border-white leading-[106.1%] uppercase`}
-                >
-                  ESTIMATE PROJECT
-                  <svg
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={4}
-                    stroke="currentColor"
-                    className="w-6 h-6 text-natural-pinaple"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-                    />
-                  </svg>
-                </div>
-
-                <button
-                  className="px-[35px] py-[26px] bg-white w-max font-syncopate text-primary-dark text-lg font-bold flex items-center gap-2 -translate-y-3 translate-x-3 leading-[106.1%] group active:translate-x-0 active:translate-y-0 transition-transform uppercase"
-                  onClick={() => navigate(`/project`)}
-                >
-                  ESTIMATE PROJECT
-                  <svg
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                    className="w-6 h-6 text-primary-dark group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <footer className="border-x-4 border-b-4 border-primary-dark max-w-[1400px] mx-auto">
-          <div className="mx-auto flex items-center justify-center border-b-4 border-primary-dark">
-            <div className="side" />
-            <div className="content">
-              <div className="flex gap-[112px] pb-20 px-16 pt-[120px]">
-                <div className="w-1/2">
-                  <div className="mb-14">
-                    <div className="flex items-center gap-[14px]">
-                      <img src="icons/logo.svg" alt="Workment Logo" />
-                      <h2>Workment</h2>
-                    </div>
-                    <p>
-                      It is a long established fact that reader will be
-                      distracted readable content of when looking.
-                    </p>
-                  </div>
-
-                  <div className="space-y-[31px]">
-                    <h5>agency@workment.com</h5>
-                    <h5>+01 984 555 000</h5>
-                    <div className="gap-[18px] flex items-center">
-                      <div className="relative w-max">
-                        <span className="absolute inset-0 bg-primary-dark border-4 border-primary-dark z-10"></span>
-                        <button className="bg-natural-pink w-[45px] h-[45px] flex items-center justify-center -translate-y-[5px] translate-x-[5px] relative z-20 active:translate-x-0 active:translate-y-0 transition-transform">
-                          <img src="icons/twitter.svg" alt="Twitter" />
-                        </button>
-                      </div>
-                      <div className="relative w-max">
-                        <span className="absolute inset-0 bg-primary-dark border-4 border-primary-dark z-10"></span>
-                        <button className="bg-natural-pink w-[45px] h-[45px] flex items-center justify-center -translate-y-[5px] translate-x-[5px] relative z-20 active:translate-x-0 active:translate-y-0 transition-transform">
-                          <img src="icons/facebook.svg" alt="Twitter" />
-                        </button>
-                      </div>
-                      <div className="relative w-max">
-                        <span className="absolute inset-0 bg-primary-dark border-4 border-primary-dark z-10"></span>
-                        <button className="bg-natural-pink w-[45px] h-[45px] flex items-center justify-center -translate-y-[5px] translate-x-[5px] relative z-20 active:translate-x-0 active:translate-y-0 transition-transform">
-                          <img src="icons/instagram.svg" alt="Twitter" />
-                        </button>
-                      </div>
-                      <div className="relative w-max">
-                        <span className="absolute inset-0 bg-primary-dark border-4 border-primary-dark z-10"></span>
-                        <button className="bg-natural-pink w-[45px] h-[45px] flex items-center justify-center -translate-y-[5px] translate-x-[5px] relative z-20 active:translate-x-0 active:translate-y-0 transition-transform">
-                          <img src="icons/pinterest.svg" alt="Twitter" />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-1/2">
-                  <h3 className="mb-5">Newsletter</h3>
-                  <form className="p-[51px] bg-natural-aqua border-4 border-primary-dark relative">
-                    <img
-                      src="illustrations/rocket.svg"
-                      alt="rocket"
-                      className="right-[30px] -top-[60px] absolute"
-                    />
-
-                    <input
-                      type="mail"
-                      className="inner-border-4 inner-border-primary-dark px-[30px] py-[22px] placeholder:text-natural-dark font-roboto-mono w-full mb-[30px]"
-                      placeholder="your mail here"
-                    />
-                    <Button>Send Message</Button>
-                  </form>
-                </div>
-              </div>
-              <nav className="flex items-center border-t-4 border-primary-dark divide-x-4 divide-primary-dark">
-                <ul className="w-[40%] h-full bg-natural-cream py-5 px-14 flex items-center justify-center text-lg gap-16">
-                  <li>
-                    <Link
-                      className="font-roboto-mono font-bold leading-[106.1%]"
-                      to="/"
-                    >
-                      HOME
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="font-roboto-mono font-bold leading-[106.1%]"
-                      to="/work"
-                    >
-                      WORK
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="font-roboto-mono font-bold leading-[106.1%]"
-                      to="/contact"
-                    >
-                      CONTACT
-                    </Link>
-                  </li>
-                </ul>
-                <ul className="w-[60%] h-full bg-natural-pink py-5 px-14 flex items-center justify-center text-lg gap-16">
-                  <li>
-                    <Link
-                      className="font-roboto-mono font-bold leading-[106.1%]"
-                      to="/licenses"
-                    >
-                      LICENSES
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="font-roboto-mono font-bold leading-[106.1%]"
-                      to="/style-guide"
-                    >
-                      STYLE GUIDE
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      className="font-roboto-mono font-bold leading-[106.1%]"
-                      to="/changelog"
-                    >
-                      CHANGELOG
-                    </Link>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <div className="side" />
-          </div>
-          <div className="mx-auto flex items-center justify-center">
-            <div className="side h-[92px]" />
-            <div className="content h-[92px] flex items-center justify-center">
-              <p>
-                Copyright © workment | Designed by VictorFlow Templates -
-                Powered by Webflow
-              </p>
-            </div>
-            <div className="side h-[92px] overflow-hidden">
-              <a
-                href="#top"
-                className="bg-primary-dark w-full h-full items-center justify-center flex"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="39"
-                  height="39"
-                  fill="none"
-                  viewBox="0 0 14 14"
-                  className="-rotate-45"
-                >
-                  <path
-                    stroke="#FFFFFF"
-                    strokeWidth="2"
-                    d="M0 1h13m0 0v13m0-13L1 13"
-                  ></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </footer>
+        <CTA />
+        <Footer />
       </div>
     </main>
   )
@@ -735,7 +447,7 @@ const Card = ({ icon, title, desc, href }) => {
       <div className="absolute -top-[42px]">
         <div className="relative">
           <div className="w-[92px] h-[92px] flex items-center justify-center rounded-full border-4 border-primary-dark bg-white group-hover:bg-natural-cream z-50 absolute group-hover:translate-x-1 group-hover:-translate-y-1 transition-all">
-            <img src={`icons/${icon}.svg`} alt={icon} />
+            <img src={`icons/megaphone.svg`} alt={icon} />
           </div>
           <div className="w-[92px] h-[92px] bg-primary-dark rounded-full absolute top-0 z-0"></div>
         </div>
