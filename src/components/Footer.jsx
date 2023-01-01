@@ -55,7 +55,10 @@ export default function Footer() {
               </div>
               <div className="w-1/2">
                 <h3 className="mb-5">Newsletter</h3>
-                <form className="p-[51px] bg-natural-aqua border-4 border-primary-dark relative">
+                <form
+                  className="p-[51px] bg-natural-aqua border-4 border-primary-dark relative"
+                  onSubmit={e => e.preventDefault()}
+                >
                   <img
                     src="illustrations/rocket.svg"
                     alt="rocket"
@@ -67,7 +70,7 @@ export default function Footer() {
                     className="inner-border-4 inner-border-primary-dark px-[30px] py-[22px] placeholder:text-natural-dark font-roboto-mono w-full mb-[30px]"
                     placeholder="your mail here"
                   />
-                  <Button>Send Message</Button>
+                  <Button href={'#'}>Send Message</Button>
                 </form>
               </div>
             </div>

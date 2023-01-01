@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default function Navbar() {
+export default function Navbar({ homePage = false }) {
   const navigations = [
     {
       name: 'HOME',
@@ -26,7 +26,9 @@ export default function Navbar() {
   ]
   return (
     <nav
-      className="max-w-[1400px] mx-auto flex items-center justify-between border-4 border-primary-dark h-24 bg-white"
+      className={`max-w-[1400px] mx-auto flex items-center justify-between border-4 border-primary-dark h-24 ${
+        homePage ? 'bg-white' : 'bg-natural-cream'
+      }`}
       id="top"
     >
       <Link
@@ -37,7 +39,11 @@ export default function Navbar() {
       </Link>
       <div className="grid grid-cols-12 flex-1 h-full items-center">
         <h3 className="col-span-4 pl-[22px]">Workment</h3>
-        <div className="font-syncopate font-bold bg-natural-wasabi h-full border-l-4 border-primary-dark flex items-center justify-center w-full col-span-8 gap-8">
+        <div
+          className={`font-syncopate font-bold h-full border-l-4 border-primary-dark flex items-center justify-center w-full col-span-8 gap-8 ${
+            homePage ? 'bg-natural-wasabi' : 'bg-white'
+          }`}
+        >
           {navigations.map(navigation => (
             <Link key={navigation.name} to={navigation.href}>
               {navigation.name}

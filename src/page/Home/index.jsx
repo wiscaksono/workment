@@ -1,23 +1,21 @@
 import gsap, { Linear } from 'gsap'
 import React, { useEffect, useRef } from 'react'
-import Marquee from 'react-fast-marquee'
 import { Link } from 'react-router-dom'
 import Button from '../../components/Button'
+import CTA from '../../components/CTA'
+import ClientMarquee from '../../components/ClientMarquee'
+import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
+import Statistics from '../../components/Statistics'
+import TextMarquee from '../../components/TextMarquee'
 import DesignResearchConcept from '../../components/sticker/DesignResearchConcept'
 import works from '../../data/works.json'
-import KeepSmileEveryday from '../../components/sticker/KeepSmileEveryday'
-import CTA from '../../components/CTA'
-import Footer from '../../components/Footer'
-import ClientMarquee from '../../components/ClientMarquee'
-import TextMarquee from '../../components/TextMarquee'
-import Statistics from '../../components/Statistics'
 
 export default function Home() {
   return (
-    <main className="bg-natural-aqua pt-10">
+    <main className="bg-natural-aqua py-10">
       <div className="relative z-20">
-        <Navbar />
+        <Navbar homePage={true} />
         <header className="bg-natural-cream relative">
           <div className="side flex-col gap-5">
             <a href="">
@@ -447,7 +445,7 @@ const Card = ({ icon, title, desc, href }) => {
       <div className="absolute -top-[42px]">
         <div className="relative">
           <div className="w-[92px] h-[92px] flex items-center justify-center rounded-full border-4 border-primary-dark bg-white group-hover:bg-natural-cream z-50 absolute group-hover:translate-x-1 group-hover:-translate-y-1 transition-all">
-            <img src={`icons/megaphone.svg`} alt={icon} />
+            <img src={`icons/${icon}`} alt={icon} />
           </div>
           <div className="w-[92px] h-[92px] bg-primary-dark rounded-full absolute top-0 z-0"></div>
         </div>

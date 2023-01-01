@@ -22,7 +22,14 @@ module.exports = {
           taro: '#C0C4E9',
           dark: '#3E3E3E',
           wasabi: '#DAF6CC',
+          gray: '#7A7A7A',
         },
+      },
+      divideWidth: {
+        3: '3px',
+      },
+      borderWidth: {
+        3: '3px',
       },
     },
   },

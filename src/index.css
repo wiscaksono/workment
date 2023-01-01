@@ -76,4 +76,14 @@
     text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
       1px 1px 0 white;
   }
+
+  .filter-to-natural-green {
+    filter: invert(90%) sepia(10%) saturate(1091%) hue-rotate(117deg)
+      brightness(92%) contrast(84%);
+  }
+
+  .filter-to-natural-pinaple {
+    filter: brightness(0) saturate(100%) invert(92%) sepia(81%) saturate(629%)
+      hue-rotate(328deg) brightness(107%) contrast(107%);
+  }
 }
